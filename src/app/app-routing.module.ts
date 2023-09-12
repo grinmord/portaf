@@ -1,12 +1,21 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PortafolioComponent } from './pages/portafolio/portafolio.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ItemComponent } from './pages/item/item.component';
+import { AppModule } from './app.module';
 
-
-
-const routes: Routes = [];
+const app_routes: Routes = [
+  {path: '',component:PortafolioComponent},
+  {path: 'about',component:AboutComponent},
+  {path: 'item', component:ItemComponent},
+  {path: '**',pathMatch: 'full', redirectTo: ''}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+  imports: [
+    RouterModule.forRoot( app_routes)
+  ]
+});
+
+// export class AppModule{}
