@@ -1,21 +1,18 @@
+// app-routing.module.ts
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 
-const app_routes: Routes = [
+const appRoutes: Routes = [
   { path: '', component: PortafolioComponent, pathMatch: 'full' },
   { path: 'about', component: AboutComponent, pathMatch: 'full' },
-  { path: 'portafolioitem', component: PortafolioComponent, pathMatch: 'full' },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  // Puedes agregar más rutas según tus necesidades
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(app_routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
