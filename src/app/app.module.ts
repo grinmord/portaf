@@ -1,11 +1,10 @@
-// app.module.ts
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule correctamente
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component'; // Importa app-header aquí
-import { FooterComponent } from './shared/footer/footer.component'; // Importa app-footer aquí
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component'; // Importa a
     FooterComponent,
     // ... otros componentes
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule], // Corrige la importación de HttpClientModule
   providers: [],
   bootstrap: [AppComponent],
 })
