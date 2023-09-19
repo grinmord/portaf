@@ -9,6 +9,8 @@ export class InfoPaginaService {
 
   info:InfoPagina = {};
   // cargada: false
+
+  equipo:any [] = [];
   constructor(private http:HttpClient){
     
      this.cargarInfo();
@@ -23,4 +25,9 @@ export class InfoPaginaService {
           this.info = resp
           console.log( resp)
    })
-}}
+}
+  private cargarEquipo (){
+    
+  }
+}
+
