@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { InfoPaginaService } from './services/info-pagina.service';
-import { ProductosService } from './services/productos.service';
+import { ProductosService } from './services/ProductosService';
 
 @Component({
   selector: 'app-root',
