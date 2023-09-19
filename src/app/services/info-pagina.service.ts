@@ -10,18 +10,17 @@ export class InfoPaginaService {
   info:InfoPagina = {};
   // cargada: false
   constructor(private http:HttpClient){
-    console.log('Servicio de infoPagina listo')
+    
+     this.cargarInfo();
 
-
+  }
+    private cargarInfo (){
     //leer json
-
     this.http.get('assets/data/datapagina.json')
         .subscribe((resp: InfoPagina)=> {
 
           // this.cargada= true;
           this.info = resp
-
           console.log( resp)
-        })
-}
-}
+   })
+}}
