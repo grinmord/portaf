@@ -6,12 +6,11 @@ import { InfoPaginaService } from '../../services/info-pagina.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
 
-  constructor(public infoPaginaService:InfoPaginaService) { }
-
+  constructor( public _servicio: InfoPaginaService ) { }
 
   ngOnInit() {
-    
   }
+
 }
